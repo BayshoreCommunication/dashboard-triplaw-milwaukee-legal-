@@ -24,8 +24,9 @@ function SigninPage() {
   });
 
   const color = data?.data?.color;
+
   useEffect(() => {
-    if (color !== undefined) {
+    if (color) {
       setTheme(color);
     }
   }, [color]);

@@ -8,7 +8,7 @@ export default function Home() {
     path: "/user/dashboard",
   });
 
-  console.log("dashboardData", dashboardData);
+  //console.log("dashboardData", dashboardData);
 
   return (
     <PageWrapper
