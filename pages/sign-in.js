@@ -22,14 +22,15 @@ function SigninPage() {
   const { data, isPending } = useGetDataPublic({
     path: "/user/public/logo",
   });
-  const { setTheme } = useSiteInfo();
 
+  const color = data?.data?.color;
   useEffect(() => {
-    data?.data?.color && setTheme(data?.data?.color);
-  }, []);
-  //console.log(data?.success?.logo);
-
-  const logo = data?.data?.color;
+    if (color !== undefined) {
+      setTheme(color);
+    }
+  }, [color]);
+  const { setTheme } = useSiteInfo();
+  const logo = data?.data?.success?.logo;
 
   const { signin } = useSignin();
 
