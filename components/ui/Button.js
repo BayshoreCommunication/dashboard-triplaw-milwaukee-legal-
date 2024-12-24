@@ -18,12 +18,12 @@ function Button({
       type={type}
       onClick={onClick}
       className={cn(
-        "px-4 py-2 rounded-full border disabled:pointer-events-none disabled:opacity-50",
+        "px-4 py-2 rounded-full border disabled:pointer-events-none disabled:opacity-50 bg-custom-red2",
         className
       )}
       style={{
         borderColor: theme,
-        backgroundColor: variant === "outline" ? "transparent" : theme,
+
         color: variant === "outline" ? theme : "white",
       }}
       disabled={disabled}

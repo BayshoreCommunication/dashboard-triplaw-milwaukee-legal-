@@ -8,6 +8,9 @@ import { PasswordField } from "@/components/FormFields/PasswordField";
 import { CheckboxField } from "@/components/FormFields/CheckboxField";
 import { Spinner } from "@/components/Loading/Spinner";
 import Button from "@/components/ui/Button";
+import { useSiteInfo } from "@/lib/store";
+import useGetData from "@/hooks/useGetData";
+import { useEffect } from "react";
 
 function SigninPage() {
   const initialValues = {
@@ -19,8 +22,14 @@ function SigninPage() {
   const { data, isPending } = useGetDataPublic({
     path: "/user/public/logo",
   });
+  const { setTheme } = useSiteInfo();
 
-  const logo = data?.success?.logo;
+  useEffect(() => {
+    data?.data?.color && setTheme(data?.data?.color);
+  }, []);
+  //console.log(data?.success?.logo);
+
+  const logo = data?.data?.color;
 
   const { signin } = useSignin();
 

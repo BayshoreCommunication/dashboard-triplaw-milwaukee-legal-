@@ -31,7 +31,7 @@ function usePostData({ path, revalidate }) {
       // console.log(data);
     },
     onError: (error) => {
-      console.log("error is", error.response.data);
+      // console.log("error is", error.response.data);
       toast.error(error.response?.data?.error || "Something went wrong");
     },
   });

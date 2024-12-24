@@ -36,7 +36,7 @@ function ImageUploadField({
     if (!image) return;
 
     if (image.size > imageMaxSize * 1024) {
-      console.log("Image size exceeds the limit");
+      //console.log("Image size exceeds the limit");
       toast.error("Image size exceeds the limit");
       return;
     }
@@ -67,13 +67,13 @@ function ImageUploadField({
         setImage(null);
         setImageUploaded(true);
       } else {
-        console.log("error", data);
+        //console.log("error", data);
         setImage(null);
         setShowImageModal(false);
         toast.error("Image upload failed, try again");
       }
     } catch (error) {
-      console.log("error", error);
+      //console.log("error", error);
       setImage(null);
       setShowImageModal(false);
       toast.error("Image upload failed, try again");
@@ -117,7 +117,7 @@ function ImageUploadField({
     setDragging(false);
 
     if (e.dataTransfer.files.length > 1) {
-      console.log("single image only");
+      //console.log("single image only");
       toast.error("Single image only");
       return;
     }
@@ -125,7 +125,7 @@ function ImageUploadField({
     const droppedImage = e.dataTransfer.files[0];
 
     if (droppedImage.size > imageMaxSize * 1024) {
-      console.log("Image size exceeds the limit");
+      //console.log("Image size exceeds the limit");
       toast.error("Image size exceeds the limit");
       return;
     }

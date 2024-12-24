@@ -31,7 +31,7 @@ function useDeleteData({ path, revalidate }) {
       // console.log(data);
     },
     onError: (error) => {
-      console.log("error is", error.response.data);
+      // console.log("error is", error.response.data);
       toast.error("Something went wrong");
     },
   });
