@@ -8,6 +8,9 @@
     width: 0px;
   }
 
+
+
+  
   /* firefox */
   @supports (scrollbar-color: grey transparent) {
     .sidebar {
