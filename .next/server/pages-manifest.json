@@ -2,8 +2,14 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/sign-in": "pages/sign-in.js",
   "/": "pages/index.js",
+  "/categories": "pages/categories.js",
+  "/blog": "pages/blog.js",
+  "/message": "pages/message.js",
+  "/api/google/data": "pages/api/google/data.js",
+  "/media": "pages/media.js",
+  "/settings": "pages/settings.js",
+  "/api/google/user": "pages/api/google/user.js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/api/google/data": "pages/api/google/data.js"
+  "/sign-in": "pages/sign-in.js"
 }
