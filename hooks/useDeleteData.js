@@ -1,3 +1,4 @@
+"use client";
 import axios from "axios";
 import { toast } from "sonner";
 import { useSession } from "next-auth/react";
