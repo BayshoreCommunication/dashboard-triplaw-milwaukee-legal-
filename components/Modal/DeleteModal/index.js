@@ -33,11 +33,11 @@ function DeleteModal({
           {/* <div className="mt-2 size-[116px]">
             <Lottie animationData={deleteLottie} />
           </div> */}
-          <div className="mt-2 size-[116px] m-auto flex justify-center items-center">
-            <FaTrashCan className="text-red-500 h-full w-fit p-4" />
+          <div className=" size-28  m-auto flex justify-center items-center rounded-full border-red-500 border p-2 my-6">
+            <FaTrashCan className="text-red-500 size-16 " />
           </div>
 
-          <div className="mt-4 flex justify-center gap-5">
+          <div className=" flex justify-center gap-5">
             <Button
               type="button"
               variant="outline"
