@@ -11,7 +11,7 @@
 
 
   
-  /* firefox */
+  /* firefox   */
   @supports (scrollbar-color: grey transparent) {
     .sidebar {
       scrollbar-width: none;
