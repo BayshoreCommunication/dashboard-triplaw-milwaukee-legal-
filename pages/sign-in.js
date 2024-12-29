@@ -24,13 +24,13 @@ function SigninPage() {
   });
 
   const color = data?.data?.color;
-
+  const { setTheme } = useSiteInfo();
   useEffect(() => {
     if (color) {
       setTheme(color);
     }
   }, [color, setTheme]);
-  const { setTheme } = useSiteInfo();
+
   const logo = data?.data?.success?.logo;
 
   const { signin } = useSignin();
