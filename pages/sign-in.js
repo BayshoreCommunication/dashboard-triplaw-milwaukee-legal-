@@ -29,7 +29,7 @@ function SigninPage() {
     if (color) {
       setTheme(color);
     }
-  }, [color]);
+  }, [color, setTheme]);
   const { setTheme } = useSiteInfo();
   const logo = data?.data?.success?.logo;
 

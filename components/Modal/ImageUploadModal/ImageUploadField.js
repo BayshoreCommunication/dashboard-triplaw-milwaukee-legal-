@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { toast } from "sonner";
 import useTheme from "@/hooks/useTheme";
@@ -32,7 +32,7 @@ function ImageUploadField({
 
   const imageMaxSize = 500;
 
-  const handleImageUpload = async () => {
+  const handleImageUpload = useCallback(async () => {
     if (!image) return;
 
     if (image.size > imageMaxSize * 1024) {
@@ -80,11 +80,10 @@ function ImageUploadField({
     }
 
     setImageUploading(false);
-  };
-
+  }, [image, setShowImageModal, setImageUploading, setImageUploaded]);
   useEffect(() => {
     image && handleImageUpload();
-  }, [image]);
+  }, [image, handleImageUpload]);
 
   const handleImageChange = async (e) => {
     if (!e.target.files || e.target.files.length === 0) {
