@@ -26,6 +26,7 @@
     "axios": "^1.6.4",
     "chart.js": "^4.4.1",
     "clsx": "^2.1.0",
+    "aws-sdk": "^2.1692.0",
     "formik": "^2.4.5",
     "googleapis": "^130.0.0",
     "lottie-react": "^2.4.0",
